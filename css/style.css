@@ -151,9 +151,16 @@ section{ padding:120px var(--pad); }
   transition:background .3s ease;
 }
 .product-card:hover{ background:var(--panel-2); }
-.product-photo{ aspect-ratio:1/1; overflow:hidden; }
-.product-photo img{ width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.2,.8,.2,1); }
-.product-card:hover .product-photo img{ transform:scale(1.06); }
+.product-photo{
+  aspect-ratio:1/1; overflow:hidden; position:relative;
+  background:radial-gradient(circle at 50% 50%, #161f38 0%, #0d1322 100%);
+}
+.product-photo img{
+  width:100%; height:100%; object-fit:contain; object-position:center;
+  padding:14px;
+  transition:transform .6s cubic-bezier(.2,.8,.2,1);
+}
+.product-card:hover .product-photo img{ transform:scale(1.045); }
 .product-body{ padding:28px 26px 30px; display:flex; flex-direction:column; flex:1; }
 .product-species{
   font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);
@@ -260,8 +267,22 @@ section{ padding:120px var(--pad); }
 .footer-legal{ max-width:var(--maxw); margin:24px auto 0; text-align:center; font-size:12px; color:var(--mute-2); }
 
 /* ---------- reveal animation ---------- */
-.reveal{ opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; }
+.reveal{
+  opacity:0; transform:translateY(32px);
+  transition:opacity 1s cubic-bezier(.16,.7,.2,1), transform 1s cubic-bezier(.16,.7,.2,1);
+  will-change:opacity, transform;
+}
 .reveal.in{ opacity:1; transform:translateY(0); }
+
+/* whole-section fade: background/border/copy ease in together as a section enters view */
+.section-fade{
+  opacity:0; transform:translateY(40px);
+  transition:opacity 1.1s cubic-bezier(.16,.7,.2,1), transform 1.1s cubic-bezier(.16,.7,.2,1);
+}
+.section-fade.in{ opacity:1; transform:translateY(0); }
+
+/* stagger children of a grid once their parent section is revealed */
+.section-fade .reveal{ transition-delay:calc(var(--stagger, 0) * 70ms); }
 
 /* ---------- responsive ---------- */
 @media (max-width:980px){

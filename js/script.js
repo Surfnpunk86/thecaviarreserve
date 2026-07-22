@@ -15,10 +15,14 @@ if (navToggle && mainNav) {
 }
 
 // ============ Scroll reveal ============
+// Individual elements that fade/slide in as they enter view
 const revealTargets = document.querySelectorAll(
   '.product-card, .philosophy-card, .testimonial-card, .trust-item, .section-head, .pull-quote'
 );
-revealTargets.forEach(el => el.classList.add('reveal'));
+revealTargets.forEach((el, i) => {
+  el.classList.add('reveal');
+  el.style.setProperty('--stagger', i % 9); // resets naturally per grid group
+});
 
 const io = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -30,6 +34,20 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
 
 revealTargets.forEach(el => io.observe(el));
+
+// Whole sections fade/slide in together as the user scrolls to them,
+// giving a smooth transition from one section to the next
+const sectionTargets = document.querySelectorAll('.section-fade');
+const sectionIO = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in');
+      sectionIO.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -80px 0px' });
+
+sectionTargets.forEach(el => sectionIO.observe(el));
 
 // ============ Hero canvas: drifting roe ============
 (function () {
