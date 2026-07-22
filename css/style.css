@@ -66,11 +66,9 @@ ul,ol{ margin:0; padding:0; list-style:none; }
   max-width:var(--maxw); margin:0 auto; padding:20px var(--pad);
   display:flex; align-items:center; justify-content:space-between;
 }
-.brand{ display:flex; align-items:center; gap:10px; }
+.brand{ display:flex; align-items:center; gap:11px; }
 .brand-mark{
-  width:34px; height:34px; border-radius:50%; border:1px solid var(--gold);
-  display:flex; align-items:center; justify-content:center;
-  font-family:var(--serif); font-size:13px; color:var(--gold-hi); letter-spacing:0.03em;
+  width:auto; height:38px; display:block; object-fit:contain;
 }
 .brand-name{ font-family:var(--serif); font-size:16px; letter-spacing:0.02em; color:var(--pearl); }
 .main-nav{ display:flex; gap:36px; }
