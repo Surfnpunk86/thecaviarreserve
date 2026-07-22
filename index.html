@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Caviar Reserve — Nueve Orígenes de Caviar de Autor</title>
+<meta name="description" content="Nueve variedades de caviar UltraPremium, de Siberia al Caspio. Ficha técnica de calibre, origen y perfil de sabor de cada selección. Sin intermediarios, con certificado de origen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2242%22 fill=%22%23c6a15b%22/></svg>">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">SR</span>
+      <span class="brand-name">The&nbsp;Caviar&nbsp;Reserve</span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#coleccion">Colección</a>
+      <a href="#origenes">Orígenes</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <canvas id="roeCanvas" aria-hidden="true"></canvas>
+    <div class="hero-inner">
+      <p class="eyebrow">Casa fundada en 1987 · Selección UltraPremium</p>
+      <h1>Nueve orígenes.<br><em>Un solo estándar.</em></h1>
+      <p class="hero-lede">Del Baerii siberiano al Beluga iraní 000, cada lata de The Caviar Reserve lleva su propia ficha técnica: calibre del grano, procedencia y perfil de sabor. Nada se generaliza; cada esturión tiene su carácter.</p>
+      <div class="hero-actions">
+        <a href="#coleccion" class="btn btn-gold">Ver la colección</a>
+        <a href="#contacto" class="btn btn-line">Solicitar asesoría</a>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span></span>
+      <p>Desplazar</p>
+    </div>
+  </section>
+
+  <!-- MARKS / TRUST STRIP -->
+  <section class="trust-strip">
+    <div class="trust-item">
+      <span class="trust-num">9</span>
+      <p>Variedades activas en catálogo, cada una con lote propio</p>
+    </div>
+    <div class="trust-item">
+      <span class="trust-num">2.2–4.0</span>
+      <p>Rango de calibre de grano en milímetros, según origen</p>
+    </div>
+    <div class="trust-item">
+      <span class="trust-num">100%</span>
+      <p>Cadena de frío certificada, del productor a su mesa</p>
+    </div>
+  </section>
+
+  <!-- COLLECTION -->
+  <section class="collection" id="coleccion">
+    <div class="section-head">
+      <p class="eyebrow">La colección 2026</p>
+      <h2>Cada esturión, su propia<br><em>ficha de cata</em></h2>
+      <p class="section-lede">No mostramos precios en catálogo: cada pedido se cotiza según lote, calibre disponible y destino. Consulte disponibilidad directamente con nuestra bodega.</p>
+    </div>
+
+    <div class="product-grid">
+
+      <article class="product-card">
+        <div class="product-photo"><img src="images/caviar-baerii.jpg" alt="Caviar Baerii, esturión siberiano, grano oscuro" loading="lazy"></div>
+        <div class="product-body">
+          <p class="product-species">Acipenser baerii · Siberia</p>
+          <h3>Caviar Baerii</h3>
+          <p class="product-note">Sabor suave y mantecoso con notas de fruto seco. Grano de gris oscuro a negro, de tamaño medio.</p>
+          <dl class="spec-strip">
+            <div><dt>Calibre</dt><dd>2.2 – 2.7 mm</dd></div>
+            <div><dt>Selección</dt><dd>UltraPremium</dd></div>
+            <div><dt>Formatos</dt><dd>10 · 50 · 80 · 100 · 250 · 500 g · 1 kg</dd></div>
+          </dl>
+          <a href="#contacto" class="product-cta">Consultar disponibilidad →</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-photo"><img src="images/osetra.jpg" alt="Caviar Osetra, esturión ruso, grano dorado" loading="lazy"></div>
+        <div class="product-body">
+          <p class="product-species">Esturión ruso · Rusia e Irán</p>
+          <h3>Osetra</h3>
+          <p class="product-note">Sabor complejo, ligeramente afrutado con notas marinas. Grano firme, de color dorado-marrón.</p>
+          <dl class="spec-strip">
+            <div><dt>Calibre</dt><dd>2.8 – 3.2 mm</dd></div>
+            <div><dt>Selección</dt><dd>UltraPremium</dd></div>
+            <div><dt>Formatos</dt><dd>10 · 30 · 50 · 100 · 250 · 500 g · 1 kg</dd></div>
+          </dl>
+          <a href="#contacto" class="product-cta">Consultar disponibilidad →</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-photo"><img src="images/smoked-osetra.jpg" alt="Osetra ahumado, Acipenser schrenckii" loading="lazy"></div>
+        <div class="product-body">
+          <p class="product-species">Acipenser schrenckii · Ahumado</p>
+          <h3>Smoked Osetra</h3>
+          <p class="product-note">Osetra tradicional con un toque de ahumado natural. Intensidad alta, ideal con vodka o champagne brut.</p>
+          <dl class="spec-strip">
+            <div><dt>Calibre</dt><dd>2.8 – 3.2 mm</dd></div>
+            <div><dt>Selección</dt><dd>UltraPremium</dd></div>
+            <div><dt>Formatos</dt><dd>10 · 50 · 80 · 100 · 250 · 500 g · 1 kg</dd></div>
+          </dl>
+          <a href="#contacto" class="product-cta">Consultar disponibilidad →</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-photo"><img src="images/amur-beluga.jpg" alt="Amur Beluga, esturión Kaluga" loading="lazy"></div>
+        <div class="product-body">
+          <p class="product-species">Esturión Kaluga · Río Amur</p>
+          <h3>Amur Beluga</h3>
+          <p class="product-note">Híbrido de Beluga y esturión Amur. Grano grande, textura cremosa y sabor muy elegante. Color gris plateado.</p>
+          <dl class="spec-strip">
+            <div><dt>Calibre</dt><dd>3.2 – 3.6 mm</dd></div>
+            <div><dt>Selección</dt><dd>UltraPremium</dd></div>
+            <div><dt>Formatos</dt><dd>10 · 50 · 80 · 100 · 250 · 500 g · 1 kg</dd></div>
+          </dl>
+          <a href="#contacto" class="product-cta">Consultar disponibilidad →</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-photo"><img src="images/amur-osetra.jpg" alt="Amur Osetra, esturión del Amur, grano oscuro" loading="lazy"></div>
+        <div class="product-body">
+          <p class="product-species">Esturión del Amur · Río Amur</p>
+          <h3>Amur Osetra</h3>
+          <p class="product-note">Grano de tamaño medio, sabor delicado con notas terrosas y afrutadas. Muy equilibrado.</p>
+          <dl class="spec-strip">
+            <div><dt>Calibre</dt><dd>3.0 – 3.3 mm</dd></div>
+            <div><dt>Selección</dt><dd>UltraPremium</dd></div>
+            <div><dt>Formatos</dt><dd>10 · 30 · 50 · 100 · 250 · 500 g · 1 kg</dd></div>
+          </dl>
+          <a href="#contacto" class="product-cta">Consultar disponibilidad →</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-photo"><img src="images/persicus-irani.jpg" alt="Persicus Irani, esturión persa, grano negro" loading="lazy"></div>
+        <div class="product-body">
+          <p class="product-species">Esturión persa · Irán</p>
+          <h3>Persicus Irani</h3>
+          <p class="product-note">Caviar iraní de alta gama. Grano de tamaño medio a grande, con un sabor intenso y muy limpio.</p>
+          <dl class="spec-strip">
+            <div><dt>Calibre</dt><dd>2.9 – 3.3 mm</dd></div>
+            <div><dt>Selección</dt><dd>UltraPremium</dd></div>
+            <div><dt>Formatos</dt><dd>10 · 30 · 50 · 100 · 250 · 500 g · 1 kg</dd></div>
+          </dl>
+          <a href="#contacto" class="product-cta">Consultar disponibilidad →</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-photo"><img src="images/iranian-beluga.jpg" alt="Iranian Beluga, esturión Beluga" loading="lazy"></div>
+        <div class="product-body">
+          <p class="product-species">Esturión Beluga · Irán</p>
+          <h3>Iranian Beluga</h3>
+          <p class="product-note">El más prestigioso. Grano grande, textura suave y sabor profundo sin amargor. Color gris nacarado.</p>
+          <dl class="spec-strip">
+            <div><dt>Calibre</dt><dd>3.3 – 3.7 mm</dd></div>
+            <div><dt>Selección</dt><dd>UltraPremium</dd></div>
+            <div><dt>Formatos</dt><dd>10 · 30 · 50 · 100 · 250 · 500 g · 1 kg</dd></div>
+          </dl>
+          <a href="#contacto" class="product-cta">Consultar disponibilidad →</a>
+        </div>
+      </article>
+
+      <article class="product-card product-card--rare">
+        <div class="product-photo"><img src="images/iranian-beluga-000.jpg" alt="Iranian Beluga 000, grado premium extra grande" loading="lazy"></div>
+        <div class="product-body">
+          <p class="product-species">Grado Premium · Edición 000</p>
+          <h3>Iranian Beluga 000</h3>
+          <p class="product-note">Calidad suprema. Grano extra grande, de textura muy cremosa y elegante. Extremadamente exclusivo.</p>
+          <dl class="spec-strip">
+            <div><dt>Calibre</dt><dd>3.5 – 4.0 mm</dd></div>
+            <div><dt>Selección</dt><dd>UltraPremium</dd></div>
+            <div><dt>Formatos</dt><dd>10 · 30 · 50 · 100 · 250 · 500 g · 1 kg</dd></div>
+          </dl>
+          <a href="#contacto" class="product-cta">Consultar disponibilidad →</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-photo"><img src="images/albino-belgian.jpg" alt="Albino Belgian, variedad albina, grano dorado" loading="lazy"></div>
+        <div class="product-body">
+          <p class="product-species">Variedad Albina · Acuicultura europea</p>
+          <h3>Albino Belgian</h3>
+          <p class="product-note">Tono dorado claro. Sabor delicado y singular, muy apreciado por su rareza.</p>
+          <dl class="spec-strip">
+            <div><dt>Calibre</dt><dd>2.8 – 3.2 mm</dd></div>
+            <div><dt>Selección</dt><dd>UltraPremium</dd></div>
+            <div><dt>Formatos</dt><dd>10 · 30 · 50 · 100 · 250 · 500 g · 1 kg</dd></div>
+          </dl>
+          <a href="#contacto" class="product-cta">Consultar disponibilidad →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY / ORIGINS -->
+  <section class="philosophy" id="origenes">
+    <div class="section-head">
+      <p class="eyebrow">Nuestra tradición</p>
+      <h2>Una filosofía de<br><em>excelencia absoluta</em></h2>
+      <p class="section-lede">Desde las profundidades del Caspio y el Amur hasta las mesas de los restaurantes más exigentes del mundo, The Caviar Reserve es sinónimo de autenticidad, precisión y trazabilidad completa.</p>
+    </div>
+    <div class="philosophy-grid">
+      <div class="philosophy-card">
+        <span class="philosophy-mark">Maridaje</span>
+        <h3>Champagne y alta coctelería</h3>
+        <p>Nuestros sommeliers seleccionan la cuvée exacta para cada variedad: desde un blanc de blancs mineral hasta un brut de guarda prolongada.</p>
+      </div>
+      <div class="philosophy-card">
+        <span class="philosophy-mark">Distribución</span>
+        <h3>Restaurantes de alta cocina</h3>
+        <p>Presentes en las cocinas de restaurantes de referencia en cuatro continentes, con lotes reservados y trazabilidad por partida.</p>
+      </div>
+      <div class="philosophy-card">
+        <span class="philosophy-mark">Eventos</span>
+        <h3>Servicio privado</h3>
+        <p>Organizamos degustaciones en localizaciones privadas —yates, bodegas, residencias— con protocolo de servicio y temperatura controlada.</p>
+      </div>
+      <div class="philosophy-card">
+        <span class="philosophy-mark">Colaboración</span>
+        <h3>Chefs y sumilleres</h3>
+        <p>Trabajamos junto a equipos de cocina para adaptar calibre, salinidad y formato a cada carta y cada momento del servicio.</p>
+      </div>
+    </div>
+    <blockquote class="pull-quote">
+      “El caviar no es un lujo — es la expresión más pura de la generosidad del océano.”
+      <cite>— Jacques Martel, Chef · 3 Estrellas Michelin</cite>
+    </blockquote>
+  </section>
+
+  <!-- EXPERIENCE / TESTIMONIALS -->
+  <section class="testimonials" id="experiencia">
+    <div class="section-head">
+      <p class="eyebrow">Voces de distinción</p>
+      <h2>Lo que dicen quienes<br><em>sirven nuestras latas</em></h2>
+    </div>
+    <div class="testimonial-grid">
+      <figure class="testimonial-card">
+        <blockquote>He probado caviares de todas las latitudes, pero el Iranian Beluga de The Caviar Reserve tiene una profundidad y una finura que no había encontrado antes.</blockquote>
+        <figcaption>
+          <span class="avatar">IF</span>
+          <span>
+            <strong>Isabelle Fontaine</strong>
+            <small>Directora Gastronómica · Élysée Palace, París</small>
+          </span>
+        </figcaption>
+      </figure>
+      <figure class="testimonial-card">
+        <blockquote>Para nuestras cenas en bodega, el Amur Osetra es el acompañamiento perfecto. Elegancia y complejidad en cada grano.</blockquote>
+        <figcaption>
+          <span class="avatar">EV</span>
+          <span>
+            <strong>Eduardo Valdés</strong>
+            <small>Enólogo y coleccionista · Ribera del Duero</small>
+          </span>
+        </figcaption>
+      </figure>
+      <figure class="testimonial-card">
+        <blockquote>El Albino Belgian es pureza absoluta. Un producto que habla por sí mismo, sin necesidad de adornos.</blockquote>
+        <figcaption>
+          <span class="avatar">SM</span>
+          <span>
+            <strong>Sakura Mizuno</strong>
+            <small>Chef Ejecutiva · Mizuno Restaurant, Tokio</small>
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contacto">
+    <div class="contact-inner">
+      <div class="contact-copy">
+        <p class="eyebrow">Contacto directo</p>
+        <h2>Cada pedido se<br><em>cotiza a medida</em></h2>
+        <p class="section-lede">Indíquenos la variedad, el formato y el destino. Le responderemos con disponibilidad, calibre del lote actual y condiciones de envío en frío.</p>
+        <ul class="contact-list">
+          <li><span>Correo</span><a href="mailto:reservas@caviarreserve.com">reservas@caviarreserve.com</a></li>
+          <li><span>Teléfono</span><a href="tel:+34910000000">+34 91 000 00 00</a></li>
+          <li><span>Sala de cata</span><a href="#">Calle de Serrano 47, Madrid</a></li>
+        </ul>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <label>Nombre
+          <input type="text" name="name" required placeholder="Su nombre">
+        </label>
+        <label>Correo
+          <input type="email" name="email" required placeholder="usted@correo.com">
+        </label>
+        <label>Variedad de interés
+          <select name="variety">
+            <option>Caviar Baerii</option>
+            <option>Osetra</option>
+            <option>Smoked Osetra</option>
+            <option>Amur Beluga</option>
+            <option>Amur Osetra</option>
+            <option>Persicus Irani</option>
+            <option>Iranian Beluga</option>
+            <option>Iranian Beluga 000</option>
+            <option>Albino Belgian</option>
+            <option>Aún no lo sé</option>
+          </select>
+        </label>
+        <label>Mensaje
+          <textarea name="message" rows="3" placeholder="Formato, cantidad, fecha del evento…"></textarea>
+        </label>
+        <button type="submit" class="btn btn-gold btn-full">Enviar solicitud</button>
+        <p class="form-note" id="formNote" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark">SR</span>
+      <p>The Caviar Reserve<br><small>Haute gastronomie desde 1987</small></p>
+    </div>
+    <nav class="footer-nav">
+      <a href="#coleccion">Colección</a>
+      <a href="#origenes">Orígenes</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="footer-social">
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="#" aria-label="WhatsApp">WhatsApp</a>
+      <a href="#" aria-label="LinkedIn">LinkedIn</a>
+    </div>
+  </div>
+  <p class="footer-legal">© 2026 The Caviar Reserve. Todos los derechos reservados.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
