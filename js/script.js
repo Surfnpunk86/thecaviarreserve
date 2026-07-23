@@ -138,3 +138,58 @@ if (header) {
   };
   window.addEventListener('scroll', onScroll, { passive: true });
 }
+
+// ============ 3D interactive logo (tilts toward the cursor, gold shine sweep) ============
+(function () {
+  const wrap = document.getElementById('heroLogo3d');
+  const stage = document.getElementById('logo3dStage');
+  const shine = document.getElementById('logo3dShine');
+  if (!wrap || !stage) return;
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isTouch = window.matchMedia('(hover: none)').matches;
+  if (prefersReduced || isTouch) return; // keep it static/simple on touch & reduced-motion
+
+  const MAX_TILT = 20; // degrees
+  let targetX = 0, targetY = 0, currentX = 0, currentY = 0;
+  let raf = null;
+
+  function onMove(e) {
+    const rect = wrap.getBoundingClientRect();
+    const px = (e.clientX - rect.left) / rect.width;  // 0..1
+    const py = (e.clientY - rect.top) / rect.height;   // 0..1
+    const nx = Math.min(Math.max(px, 0), 1) * 2 - 1;    // -1..1
+    const ny = Math.min(Math.max(py, 0), 1) * 2 - 1;    // -1..1
+
+    targetY = nx * MAX_TILT;        // left/right cursor -> rotateY
+    targetX = -ny * MAX_TILT;       // up/down cursor -> rotateX (inverted for natural feel)
+
+    // move the gold shine sweep across the logo silhouette based on cursor position
+    const shinePos = 50 + nx * 40;
+    if (shine) shine.style.backgroundPosition = `${shinePos}% 50%`;
+
+    if (!raf) raf = requestAnimationFrame(animate);
+  }
+
+  function animate() {
+    // smooth easing toward the target angle for a fluid, elegant motion
+    currentX += (targetX - currentX) * 0.12;
+    currentY += (targetY - currentY) * 0.12;
+    stage.style.transform = `rotateX(${currentX.toFixed(2)}deg) rotateY(${currentY.toFixed(2)}deg)`;
+
+    if (Math.abs(targetX - currentX) > 0.02 || Math.abs(targetY - currentY) > 0.02) {
+      raf = requestAnimationFrame(animate);
+    } else {
+      raf = null;
+    }
+  }
+
+  function onLeave() {
+    targetX = 0; targetY = 0;
+    if (shine) shine.style.backgroundPosition = '50% 50%';
+    if (!raf) raf = requestAnimationFrame(animate);
+  }
+
+  wrap.addEventListener('mousemove', onMove);
+  wrap.addEventListener('mouseleave', onLeave);
+})();
